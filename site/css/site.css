@@ -105,7 +105,7 @@ i.kh-done{display:inline-flex;align-items:center;justify-content:center;line-hei
 
 /* ribbon band */
 .elementor-7167 .elementor-element.elementor-element-54f8091:not(.elementor-motion-effects-element-type-background),
-.elementor-7167 .elementor-element.elementor-element-54f8091 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#111110 !important;}
+.elementor-7167 .elementor-element.elementor-element-54f8091 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#ffff !important;}
 .elementor-element-54f8091 .xp-text-marquee .icon,
 .elementor-element-54f8091 .xp-text-marquee .icon i,
 .elementor-element-54f8091 .xp-text-marquee .icon svg{color:#000000 !important;}

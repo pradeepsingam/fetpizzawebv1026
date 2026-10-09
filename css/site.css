@@ -246,3 +246,22 @@ html body #side-panel .elementor-icon-list-item:hover .elementor-icon-list-text{
   overflow: visible !important;
 }
 
+/* ===== Hero heading "FETPIZZA": reduced size by 25% (200px -> 150px) and moved up 20% ===== */
+.elementor-7167 .elementor-element.elementor-element-18416b0 .xp-heading .main-head {
+  font-size: 150px !important;
+  transform: translateY(-20%) !important;
+}
+
+@media (max-width: 1024px) {
+  .elementor-7167 .elementor-element.elementor-element-18416b0 .xp-heading .main-head {
+    font-size: 90px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .elementor-7167 .elementor-element.elementor-element-18416b0 .xp-heading .main-head {
+    font-size: 38px !important;
+  }
+}
+
+

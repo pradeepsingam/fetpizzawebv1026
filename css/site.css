@@ -229,3 +229,20 @@ html body #side-panel .elementor-heading-title{color:#fff!important;text-shadow:
 html body #side-panel .elementor-icon-list-icon i{color:#eb0e0e!important}
 html body #side-panel .elementor-icon-list-icon svg{fill:#ec1818!important}
 html body #side-panel .elementor-icon-list-item:hover .elementor-icon-list-text{color:rgba(255,255,255,.7)!important}
+
+/* ===== Hero food image: preserve natural height and prevent bottom cropping ===== */
+.elementor-7167 .elementor-element.elementor-element-22aa9ab img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  object-position: top center !important;
+  display: block !important;
+}
+.elementor-7167 .elementor-element.elementor-element-22aa9ab,
+.elementor-7167 .elementor-element.elementor-element-22aa9ab > .elementor-widget-container,
+.elementor-7167 .elementor-element.elementor-element-0a567b1 {
+  height: auto !important;
+  overflow: visible !important;
+}
+

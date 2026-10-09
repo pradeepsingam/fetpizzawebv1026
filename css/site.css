@@ -230,6 +230,45 @@ html body #side-panel .elementor-icon-list-icon i{color:#eb0e0e!important}
 html body #side-panel .elementor-icon-list-icon svg{fill:#ec1818!important}
 html body #side-panel .elementor-icon-list-item:hover .elementor-icon-list-text{color:rgba(255,255,255,.7)!important}
 
+/* ===== Side panel: centered Facebook link just above divider ===== */
+html body #side-panel .elementor-element-e27129b {
+  margin-top: auto !important;
+  margin-bottom: 12px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+}
+html body #side-panel .elementor-element-591fd55 {
+  width: 100% !important;
+  text-align: center !important;
+}
+html body #side-panel .elementor-element-591fd55 .elementor-icon-list-items {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+html body #side-panel .elementor-element-591fd55 .elementor-icon-list-item {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+html body #side-panel .elementor-element-591fd55 .elementor-icon-list-item > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+html body #side-panel .elementor-element-8c36ebb {
+  padding-top: 0 !important;
+  padding-bottom: 24px !important;
+}
+html body #side-panel .elementor-element-a37740b > .elementor-widget-container {
+  margin-bottom: 0 !important;
+}
+
 /* ===== Hero food image: preserve natural height and prevent bottom cropping ===== */
 .elementor-7167 .elementor-element.elementor-element-22aa9ab img {
   width: 100% !important;

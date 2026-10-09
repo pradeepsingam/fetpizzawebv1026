@@ -246,3 +246,90 @@ html body #side-panel .elementor-icon-list-item:hover .elementor-icon-list-text{
   overflow: visible !important;
 }
 
+/* ===== Hero Section Background Animated Text (blurred gray FETPIZZA) ===== */
+.elementor-7167 .elementor-element.elementor-element-8361c4b {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: clamp(540px, 68vh, 660px) !important;
+}
+.elementor-7167 .elementor-element.elementor-element-31a5ad4 {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+.elementor-7167 .elementor-element.elementor-element-ecd9c75 {
+  position: relative !important;
+  z-index: 2 !important;
+  align-items: center !important;
+}
+.elementor-7167 .elementor-element.elementor-element-18416b0 {
+  display: none !important;
+}
+.elementor-7167 .elementor-element.elementor-element-22aa9ab > .elementor-widget-container {
+  margin: 0 !important;
+}
+
+.hero-bg-marquee {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  user-select: none !important;
+}
+.hero-bg-marquee-track {
+  display: flex !important;
+  align-items: center !important;
+  width: max-content !important;
+  white-space: nowrap !important;
+  will-change: transform !important;
+  animation: heroBgScroll 45s linear infinite !important;
+}
+.hero-bg-marquee-group {
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+}
+.hero-bg-marquee-group span,
+.elementor-element-8361c4b .hero-bg-marquee-group span {
+  font-family: 'Bangers', cursive, sans-serif !important;
+  font-size: clamp(340px, 86vh, 620px) !important;
+  line-height: 0.82 !important;
+  color: rgba(160, 160, 160, 0.32) !important;
+  -webkit-text-fill-color: rgba(160, 160, 160, 0.32) !important;
+  filter: blur(5px) !important;
+  letter-spacing: 0.05em !important;
+  padding: 0 50px !important;
+  display: inline-block !important;
+}
+
+@keyframes heroBgScroll {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (max-width: 767px) {
+  .elementor-7167 .elementor-element.elementor-element-43b83a5 {
+    margin-top: 15px !important;
+    --margin-top: 15px !important;
+  }
+  .hero-bg-marquee-group span,
+  .elementor-element-8361c4b .hero-bg-marquee-group span {
+    font-size: clamp(200px, 65vh, 380px) !important;
+    filter: blur(4px) !important;
+    padding: 0 30px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-marquee-track {
+    animation: none !important;
+  }
+}
+

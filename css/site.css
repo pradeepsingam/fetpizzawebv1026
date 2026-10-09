@@ -187,7 +187,7 @@ i.cg-Mushrooms,i.cg-Pizza{-webkit-mask:none !important;mask:none !important;-web
 
 /* ===== Theme v2: red / white / green backgrounds, yellow text ===== */
 :root{--fet-yellow:#ffe600}
-.elementor-7167 .elementor-element.elementor-element-8361c4b{background-color:var(--fet-green)!important}
+.elementor-7167 .elementor-element.elementor-element-8361c4b{background:linear-gradient(to bottom, rgba(0,0,0,0.7), transparent), var(--fet-green)!important}
 .elementor-element-8361c4b *:not(img):not(svg):not(path):not(i){color:var(--fet-yellow)!important}
 .elementor-element-8361c4b .xp-text-marquee .text{color:var(--fet-yellow)!important;text-shadow:3px 3px 0 var(--fet-red)}
 /* buttons: red with yellow text, white outline */

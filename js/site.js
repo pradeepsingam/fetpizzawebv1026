@@ -142,3 +142,35 @@ window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(
     +'}';
   document.head.appendChild(s);
 })();
+
+/* side panel (desktop toggle) */
+(function(){
+  var btn = document.getElementById('panel-btn');
+  var panel = document.getElementById('side-panel');
+  if (!btn || !panel) return;
+  document.addEventListener('click', function(e){
+    var hit = e.target.closest('#panel-btn, .side-panel-close, .panel-overlay');
+    if (!hit) return;
+    e.preventDefault();
+    var isOpen = panel.classList.contains('side-panel-open');
+    var next = hit.id === 'panel-btn' ? !isOpen : false;
+    btn.classList.toggle('active', next);
+    panel.classList.toggle('side-panel-open', next);
+    document.body.classList.toggle('side-panel-active', next);
+  });
+})();
+
+/* back to top smooth scroll */
+(function(){
+  var btt = document.getElementById('back-to-top');
+  if (!btt) return;
+  function checkScroll(){
+    btt.classList.toggle('show', (window.pageYOffset || document.documentElement.scrollTop) > 500);
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+  btt.addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();

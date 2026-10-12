@@ -1400,6 +1400,13 @@ body,
 
 /* Shared footer background. */
 #site-footer,
-#site-footer .elementor-element-4f584fe {
+.site-footer,
+#site-footer .elementor,
+#site-footer .elementor-element-4f584fe,
+.elementor-7425 .elementor-element.elementor-element-4f584fe,
+.elementor-7425 .elementor-element.elementor-element-4f584fe:not(.elementor-motion-effects-element-type-background),
+.elementor-7425 .elementor-element.elementor-element-4f584fe > .elementor-motion-effects-container > .elementor-motion-effects-layer {
   background: #000 !important;
+  background-color: #000 !important;
 }
+

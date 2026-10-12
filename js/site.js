@@ -127,20 +127,7 @@ window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(
     if(logoBox&&logoBox.parentNode)logoBox.parentNode.insertBefore(ul,logoBox.nextSibling);
     else sp.insertBefore(ul,sp.firstChild);
   }
-  var s=document.createElement('style');
-  s.textContent='@media(max-width:1024px){'
-    +'html body #side-panel,html body #side-panel .side-panel-block,html body #side-panel .elementor,html body #side-panel .e-con,html body #side-panel .e-con-inner{background:#030405!important;background-color:#030405!important;background-image:none!important}'
-    +'html body #side-panel .kh-sp-nav{list-style:none!important;margin:10px 0 20px!important;padding:0 16px!important}'
-    +'html body #side-panel .kh-sp-nav li{margin:0!important;padding:0!important;border-bottom:1px solid rgba(255,255,255,.15)!important}'
-    +'html body #side-panel .kh-sp-nav li a{display:block!important;padding:16px 0!important;color:#fff!important;font-size:20px!important;font-weight:700!important;text-decoration:none!important;letter-spacing:.5px}'
-    +'html body #side-panel .kh-sp-nav li.kh-cur a{color:#eeee22!important}'
-    +'html body #side-panel .elementor-icon-list-text{color:#fff!important;text-shadow:none!important}'
-    +'html body #side-panel .elementor-icon-list-icon svg,html body #side-panel .elementor-icon-list-icon i{fill:#eeee22!important;color:#eeee22!important}'
-    +'html body #side-panel .title-box,html body #side-panel .title-box a{color:#eeee22!important}'
-    +'html body #side-panel .content-box p,html body #side-panel p{color:#fff!important}'
-    +'html body #side-panel .elementor-divider-separator{border-color:rgba(255,255,255,.2)!important}'
-    +'}';
-  document.head.appendChild(s);
+  // Navigation is declared directly in markup and styled in site.css
 })();
 
 /* side panel (desktop toggle) */

@@ -1536,14 +1536,48 @@ body,
 }
 
 /* Original KebabHot category glyphs, rendered as local inline SVGs. */
+.tab-titles .title-item a {
+  color: #ffffff;
+  transition: color 0.25s ease;
+  text-decoration: none;
+}
+.tab-titles .title-item .icon {
+  color: inherit;
+  display: block;
+  transition: color 0.25s ease;
+}
 .tab-titles .icon .category-food-icon {
   display: block;
   width: 48px;
   height: 48px;
   fill: currentColor;
   margin: 0 auto;
+  transition: fill 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
-.tab-titles .title-item .icon { color: #fff; }
+
+/* While hovering the icon or text, both turn yellow as on kebabhot.no */
+.tab-titles .title-item:hover a,
+.tab-titles .title-item a:hover,
+.tab-titles .title-item a:focus,
+.tab-titles .title-item a.tab-active {
+  color: var(--fet-yellow, #f2d21b) !important;
+}
+
+.tab-titles .title-item:hover a .icon,
+.tab-titles .title-item a:hover .icon,
+.tab-titles .title-item a:focus .icon,
+.tab-titles .title-item a.tab-active .icon {
+  color: var(--fet-yellow, #f2d21b) !important;
+}
+
+.tab-titles .title-item:hover a .category-food-icon,
+.tab-titles .title-item a:hover .category-food-icon,
+.tab-titles .title-item a:focus .category-food-icon,
+.tab-titles .title-item a.tab-active .category-food-icon {
+  fill: var(--fet-yellow, #f2d21b) !important;
+  color: var(--fet-yellow, #f2d21b) !important;
+  transform: translateY(-2px);
+}
 
 /* Delivery illustration and gentle pickup/delivery button feedback. */
 .elementor-element-659fa2a .delivery-icon {

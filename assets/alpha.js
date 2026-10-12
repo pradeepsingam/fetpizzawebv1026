@@ -1,13 +1,8 @@
-(function ($) {
+(function () {
     "use strict";
-    window.ga = window.ga || function () {
-        (ga.q = ga.q || []).push(arguments)
-    };
-    ga.l = +new Date;
-    ga('create', 'UA-105392568-1', 'auto');
-    ga('send', 'pageview');
-    $(document).ready(function () {
-        const canvas = document.getElementsByTagName("canvas")[0];
+    document.addEventListener("DOMContentLoaded", function () {
+        const canvas = document.getElementById("tcg-smoke-cursor");
+        if (!canvas || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         canvas.width = canvas.clientWidth;
         canvas.height = canvas.clientHeight;
 
@@ -53,7 +48,9 @@
         let bloomFramebuffers = [];
         pointers.push(new pointerPrototype());
 
-        const { gl, ext } = getWebGLContext(canvas);
+        const context = getWebGLContext(canvas);
+        if (!context) return;
+        const { gl, ext } = context;
 
         if (isMobile()) config.SHADING = false;
         if (!ext.supportLinearFiltering) {
@@ -79,6 +76,8 @@
                     canvas.getContext("webgl", params) ||
                     canvas.getContext("experimental-webgl", params);
 
+            if (!gl) return null;
+
             let halfFloat;
             let supportLinearFiltering;
             if (isWebGL2) {
@@ -88,6 +87,8 @@
                 halfFloat = gl.getExtension("OES_texture_half_float");
                 supportLinearFiltering = gl.getExtension("OES_texture_half_float_linear");
             }
+
+            if (!isWebGL2 && !halfFloat) return null;
 
             gl.clearColor(0.0, 0.0, 0.0, 1.0);
 
@@ -106,9 +107,7 @@
                 formatR = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
             }
 
-            if (formatRGBA == null)
-                ga("send", "event", isWebGL2 ? "webgl2" : "webgl", "not supported");
-            else ga("send", "event", isWebGL2 ? "webgl2" : "webgl", "supported");
+            if (!formatRGBA || !formatRG || !formatR) return null;
 
             return {
                 gl,
@@ -1545,4 +1544,4 @@
 
 
     });
-})(jQuery);
+})();

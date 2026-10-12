@@ -697,13 +697,13 @@ i.cg-Pizza {
   height: 84px;
 }
 
-/* header: translucent dark bar (like the reference video) that shrinks on scroll */
+/* Black header that shrinks on scroll. */
 .elementor-7424 .elementor-element.elementor-element-3c0ab91,
 .elementor-7424 .elementor-element.elementor-element-3c0ab91.is-fixed,
 .elementor-7424 .elementor-element.elementor-element-3c0ab91.is-fixed.is-stuck,
 .elementor-7424 .elementor-element.elementor-element-171a9f1b,
 .elementor-7424 .elementor-element.elementor-element-171a9f1b.is-fixed.is-stuck {
-  background: rgba(6, 40, 26, .95) !important;
+  background: #000 !important;
   -webkit-backdrop-filter: blur(8px) !important;
   backdrop-filter: blur(8px) !important;
   transition: padding .3s ease, background .3s ease, box-shadow .3s ease
@@ -847,7 +847,7 @@ i.cg-Pizza {
 
 .site-header .blurred_background,
 .site-header .e-con.is-fixed {
-  background: rgba(6, 40, 26, .94) !important;
+  background: #000 !important;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px)
 }
@@ -879,14 +879,14 @@ i.cg-Pizza {
 .elementor-element-3c0ab91.is-fixed,
 .elementor-element-3c0ab91.is-fixed.is-stuck,
 .elementor-7424 .elementor-element.elementor-element-3c0ab91 {
-  background: rgba(6, 40, 26, .95) !important
+  background: #000 !important
 }
 
 .main-navigation>ul>li.current_page_item>a {
   color: var(--fet-gold) !important
 }
 
-/* footer logo sits on red – give it a white badge so the red lettering stays readable */
+/* White footer logo badge keeps the red lettering readable. */
 .elementor-element-cd812a3 .the-logo img {
   background: #fff;
   padding: 8px 16px;
@@ -1346,4 +1346,60 @@ body,
     max-height: 320px !important;
     max-width: 100% !important;
   }
+}
+/* Keep the hero near the header instead of vertically centering in tall screens. */
+@media (min-width: 768px) {
+  .elementor-7167 .elementor-element.elementor-element-8361c4b {
+    justify-content: flex-start !important;
+    padding-top: clamp(32px, 5vh, 60px) !important;
+  }
+}
+
+/* Original KebabHot category glyphs, rendered as local inline SVGs. */
+.tab-titles .icon .category-food-icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  fill: currentColor;
+  margin: 0 auto;
+}
+.tab-titles .title-item .icon { color: #fff; }
+
+/* Delivery illustration and gentle pickup/delivery button feedback. */
+.elementor-element-659fa2a .delivery-icon {
+  width: 48px;
+  height: 48px;
+  display: block;
+  color: var(--fet-yellow);
+  fill: none;
+}
+.elementor-7167 .xptf-btn.service-button {
+  transition: transform .35s cubic-bezier(.2,.65,.3,1),
+    background-color .35s ease, color .35s ease, box-shadow .35s ease;
+}
+.elementor-7167 .xptf-btn.service-button:hover,
+.elementor-7167 .xptf-btn.service-button:focus-visible {
+  background-color: #fff !important;
+  color: var(--fet-red) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 14px rgba(0,0,0,.12);
+}
+.elementor-7167 .xptf-btn.service-button:focus-visible {
+  outline: 2px solid var(--fet-yellow);
+  outline-offset: 4px;
+}
+.elementor-7167 .xptf-btn.service-button:active { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .elementor-7167 .xptf-btn.service-button { transition: none; }
+  .elementor-7167 .xptf-btn.service-button:hover,
+  .elementor-7167 .xptf-btn.service-button:focus-visible { transform: none; }
+}
+
+.elementor-element-659fa2a .delivery-icon,
+.elementor-element-659fa2a .delivery-icon * { fill: none !important; }
+
+/* Shared footer background. */
+#site-footer,
+#site-footer .elementor-element-4f584fe {
+  background: #000 !important;
 }

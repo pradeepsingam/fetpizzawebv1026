@@ -1782,3 +1782,13 @@ body,
     drop-shadow(.025px 0 0 #fff) drop-shadow(-.025px 0 0 #fff)
     drop-shadow(0 .025px 0 #fff) drop-shadow(0 -.025px 0 #fff);
 }
+
+/* Keep the mobile hero gradient continuous through the ribbon area. */
+@media (max-width: 767px) {
+  .elementor-7167 .elementor-element.elementor-element-39a94a3:not(.elementor-motion-effects-element-type-background) {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .7), transparent), var(--fet-green) !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-8361c4b {
+    background: transparent !important;
+  }
+}

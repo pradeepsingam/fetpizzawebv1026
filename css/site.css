@@ -1624,3 +1624,161 @@ body,
   background-color: #000 !important;
 }
 
+
+/* Mobile hero: stack content naturally instead of retaining desktop flex bases. */
+@media (max-width: 767px) {
+  .elementor-7167 .elementor-element.elementor-element-7424385 {
+    display: none !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-39a94a3 {
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-8361c4b {
+    flex: none !important;
+    padding: 28px 16px 40px !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-31a5ad4 {
+    margin: 0 !important;
+    gap: 16px !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-18416b0 > .elementor-widget-container {
+    margin: 0 !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-ecd9c75 > .e-con-inner {
+    gap: 16px !important;
+    padding: 0 !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-0a567b1,
+  .elementor-7167 .elementor-element.elementor-element-43b83a5 {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-22aa9ab img {
+    width: 100% !important;
+    max-height: none !important;
+    transform: none !important;
+  }
+}
+
+/* Hide the decorative text arrow and its spacing on mobile. */
+@media (max-width: 767px) {
+  .elementor-7167 .elementor-element.elementor-element-0e3aa9a {
+    display: none !important;
+  }
+}
+/* Mobile ribbons: compact crossing bands matching the reference layout. */
+@media (max-width: 767px) {
+  .elementor-7167 .elementor-element.elementor-element-d11fa16,
+  .elementor-7167 .elementor-element.elementor-element-54f8091 {
+    width: 110% !important;
+    margin-left: -5% !important;
+    padding: 0 !important;
+    min-height: 56px;
+  }
+  .elementor-7167 .elementor-element.elementor-element-d11fa16 {
+    margin-top: 16px !important;
+    transform: rotate(-5deg) !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-54f8091:not(.elementor-motion-effects-element-type-background) {
+    background: #000 !important;
+    margin-top: -28px !important;
+    margin-bottom: 24px !important;
+    transform: rotate(5deg) !important;
+  }
+  .elementor-element-39a94a3 .xp-text-marquee .content-wrapper {
+    height: 56px;
+    align-items: center;
+  }
+  .elementor-7167 .elementor-element-39a94a3 .xp-text-marquee .content .text {
+    font-size: 30px !important;
+    line-height: 1 !important;
+    white-space: nowrap;
+  }
+  .elementor-7167 .elementor-element-39a94a3 .xp-text-marquee .icon {
+    margin: 0 20px !important;
+    display: inline-flex;
+    align-items: center;
+  }
+  .elementor-element-54f8091 .kh-mush-img {
+    filter: brightness(0) invert(1);
+  }
+}
+
+/* Carry the next section's red background up beneath the mobile ribbons. */
+@media (max-width: 767px) {
+  .elementor-7167 .elementor-element.elementor-element-39a94a3::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 84px;
+    background: var(--fet-red);
+    z-index: 21;
+    pointer-events: none;
+  }
+}
+
+/* Desktop ribbons use the reference's width, overlap and opposing 5-degree tilt. */
+@media (min-width: 768px) {
+  .elementor-7167 .elementor-element.elementor-element-39a94a3 {
+    row-gap: 20px !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-d11fa16,
+  .elementor-7167 .elementor-element.elementor-element-54f8091 {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-d11fa16 {
+    margin-top: 0 !important;
+    transform: rotate(-5deg) scale(1.02) !important;
+  }
+  .elementor-7167 .elementor-element.elementor-element-54f8091:not(.elementor-motion-effects-element-type-background) {
+    background: #000 !important;
+    margin-top: -50px !important;
+    margin-bottom: 0 !important;
+    transform: rotate(5deg) scale(1.02) !important;
+  }
+  .elementor-element-54f8091 .kh-mush-img {
+    filter: brightness(0) invert(1);
+  }
+}
+@media (min-width: 1025px) {
+  .elementor-7167 .elementor-element-39a94a3 .xp-text-marquee .kh-myicon {
+    height: 80px !important;
+  }
+}
+
+/* Consistent, crisp icons for the mobile navigation. */
+.bnav_bottom_nav_wrapper .bottom-nav-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  fill: none;
+  flex: none;
+}
+.bnav_bottom_nav_wrapper .current-menu-item .bottom-nav-icon {
+  color: var(--fet-yellow);
+}
+
+/* Keep cookie preferences clear of the fixed mobile navigation. */
+@media (max-width: 768px) {
+  .cky-btn-revisit-wrapper {
+    bottom: calc(90px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* User-supplied online ordering icon, displayed in white. */
+.bnav_bottom_nav_wrapper .bottom-nav-order-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1)
+    drop-shadow(.025px 0 0 #fff) drop-shadow(-.025px 0 0 #fff)
+    drop-shadow(0 .025px 0 #fff) drop-shadow(0 -.025px 0 #fff);
+}

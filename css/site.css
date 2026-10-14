@@ -1792,3 +1792,25 @@ body,
     background: transparent !important;
   }
 }
+
+/* Stack mobile footer sections without desktop offsets or dividing borders. */
+@media (max-width: 767px) {
+  #site-footer .elementor-element-45d0d44 {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: auto !important;
+    grid-auto-rows: auto;
+    row-gap: 32px !important;
+    align-items: start !important;
+  }
+  #site-footer .elementor-element-a7eaa7c {
+    margin-top: 0 !important;
+    gap: 20px !important;
+  }
+  #site-footer .elementor-element-3a88256,
+  #site-footer .elementor-element-b6dd6ed {
+    border-right: 0 !important;
+  }
+  #site-footer .elementor-element-87ba5ea > .elementor-widget-container {
+    margin-top: 0 !important;
+  }
+}

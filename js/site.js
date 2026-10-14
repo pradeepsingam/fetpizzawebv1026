@@ -23,7 +23,7 @@ var IC={
 'cg-hamburger':S('0 0 48 48','<path d="M8 22a16 12 0 0 1 32 0z"/><path d="M6 28h36"/><path d="M8 34h32"/><path d="M10 34c0 6 4 8 8 8h12c4 0 8-2 8-8"/>'),
 'ci-Group-25':S('0 0 48 48','<path d="M6 20l18-12 18 12v20H6z"/><path d="M18 40V28h12v12M6 20h36"/>'),
 'cg-Pizzeria-sign':S('0 0 48 48','<path d="M6 20l18-12 18 12v20H6z"/><path d="M18 40V28h12v12M6 20h36"/>'),
-'xp-webicon-menu':'<svg class="kh-ic" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>',
+'xp-webicon-menu':'<svg class="kh-ic" viewBox="0 0 26 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M1.5 2h23M1.5 12h23M1.5 22h23"/></svg>',
 'xp-webicon-left-arrow-2':'<svg class="kh-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V4M5 11l7-7 7 7"/></svg>',
 'xp-webicon-cancel':'<svg class="kh-ic" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>',
 'xp-webicon-arrowsoutline':'<svg class="kh-ic" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>',
@@ -48,6 +48,9 @@ if(e.target.closest('.cky-btn-revisit')){b.classList.remove('cky-hide');r.classL
 
 /* navbar: translucent at top, shrinks after scrolling */
 (function(){var h=document.getElementById('site-header');if(!h)return;var t=false;
+var spacer=document.createElement('div');spacer.className='mobile-header-spacer';spacer.setAttribute('aria-hidden','true');h.parentNode.insertBefore(spacer,h);
+function sizeSpacer(){spacer.style.height=window.matchMedia('(max-width:1024px)').matches?h.offsetHeight+'px':'0px';}
+sizeSpacer();window.addEventListener('resize',sizeSpacer);window.addEventListener('load',sizeSpacer);
 function u(){t=false;h.classList.toggle('kh-shrunk',(window.pageYOffset||document.documentElement.scrollTop)>40);}
 window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u);}},{passive:true});u();})();
 

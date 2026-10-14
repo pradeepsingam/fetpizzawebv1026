@@ -1793,6 +1793,63 @@ body,
   }
 }
 
+/* Match the reference mobile header's black area before scrolling. */
+.mobile-header-spacer {
+  display: none;
+}
+@media (max-width: 1024px) {
+  #site-header .header-mobile .elementor-element-2f03f6 {
+    --padding-top: 18px;
+    --padding-bottom: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  #site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  /* Cover the subpixel seam where the fixed header meets the hero. */
+  #site-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: #030405;
+    pointer-events: none;
+  }
+  .mobile-header-spacer {
+    display: block;
+  }
+  #site-header .header-mobile .mmenu-toggle i.xp-webicon-menu {
+    -webkit-mask-image: none;
+    mask-image: none;
+    background: transparent;
+    width: 21px;
+    height: 20px;
+    flex: none;
+  }
+  #site-header .header-mobile .mmenu-toggle button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+  }
+  #site-header .header-mobile .mmenu-toggle .kh-ic {
+    width: 21px;
+    height: 20px;
+  }
+  #site-header:not(.kh-shrunk) .header-mobile .elementor-element-171a9f1b > .e-con-inner {
+    min-height: 105.57px;
+    justify-content: center;
+  }
+}
+
 /* Stack mobile footer sections without desktop offsets or dividing borders. */
 @media (max-width: 767px) {
   #site-footer .elementor-element-45d0d44 {
